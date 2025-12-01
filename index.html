@@ -5,15 +5,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <!-- 1. العنوان -->
-    <title>Prid Egypt | تكنولوجيا البوتاجازات العصرية</title>
+    <!-- 1. العنوان تم تغييره -->
+    <title>ROYAL PRIDE | القمة في تكنولوجيا البوتاجازات</title>
     <meta name="google-site-verification" content="M4AVPnmakVfGb3OU5CIqN--Dqi4C-6KYQn-MhFM0ymU" />
     
     <!-- 2. الوصف -->
-    <meta name="description" content="شركة Prid Egypt الرائدة في تصنيع البوتاجازات والمسطحات البلت ان. تسوق الآن أحدث موديلات البوتاجازات بأفضل الأسعار مع ضمان شامل وخدمة ما بعد البيع. 01104368140">
+    <meta name="description" content="شركة ROYAL PRIDE (رويال برايد) الرائدة في تصنيع البوتاجازات والمسطحات البلت ان. فخامة التصميم وقوة الأداء. تسوق الآن أحدث الموديلات بأفضل الأسعار. 01104368140">
     
     <!-- 3. الكلمات المفتاحية -->
-    <meta name="keywords" content="بوتاجازات, Prid Egypt, بريد ايجيبت, مصنع بوتاجازات, افضل بوتاجاز في مصر, صيانة بوتاجازات, بوتاجاز 5 شعلة, افران بلت ان">
+    <meta name="keywords" content="بوتاجازات, ROYAL PRIDE, رويال برايد, مصنع بوتاجازات, افضل بوتاجاز في مصر, صيانة بوتاجازات, بوتاجاز 5 شعلة, افران بلت ان">
     
     <!-- 4. تحسين الظهور المحلي -->
     <meta name="geo.region" content="EG" />
@@ -31,15 +31,15 @@
     <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-database.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-auth.js"></script>
 
-    <!-- Schema Markup -->
+    <!-- Schema Markup تم التحديث -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "LocalBusiness",
-      "name": "Prid Egypt",
+      "name": "ROYAL PRIDE",
       "image": "https://cdn-icons-png.flaticon.com/512/785/785116.png",
       "telephone": "01104368140",
-      "url": "https://pridegypt.com", 
+      "url": "https://royalpride.com", 
       "priceRange": "$$",
       "address": {
         "@type": "PostalAddress",
@@ -64,19 +64,19 @@
 
     <style>
         :root {
-            --primary: #212529;    
-            --secondary: #e67e22;  
-            --accent: #f39c12;     
+            --primary: #1e272e;    /* أسود فحمي */
+            --secondary: #c0392b;  /* أحمر ملكي داكن */
+            --accent: #e74c3c;     /* أحمر ساطع */
             --steel: #ced4da;      
-            --glass-bg: rgba(255, 255, 255, 0.96);
-            --shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            --glass-bg: rgba(255, 255, 255, 0.97);
+            --shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
         }
 
         * { box-sizing: border-box; margin: 0; padding: 0; }
 
         body {
             font-family: 'Cairo', sans-serif;
-            background-image: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url("https://images.unsplash.com/photo-1556911220-e15b29be8c8f?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80");
+            background-image: linear-gradient(rgba(0,0,0,0.85), rgba(0,0,0,0.85)), url("https://images.unsplash.com/photo-1556911220-e15b29be8c8f?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80");
             background-size: cover; background-repeat: no-repeat; background-position: center; background-attachment: fixed;
             color: #333; overflow-x: hidden; min-height: 100vh; display: flex; flex-direction: column;
         }
@@ -95,11 +95,9 @@
         .nav-btn:hover { color: var(--secondary); transform: scale(1.1); }
         .badge { position: absolute; top: -8px; right: -8px; background: var(--secondary); color: white; border-radius: 50%; padding: 4px 7px; font-size: 0.7rem; font-weight: bold; border: 2px solid white; }
 
-        /* ========================================= */
-        /* === بداية تنسيقات السلايدر الجديد === */
-        /* ========================================= */
+        /* Slider Styles */
         .hero-slider { 
-            height: 600px; /* ارتفاع أكبر */
+            height: 600px; 
             position: relative; 
             overflow: hidden; 
             width: 100%; 
@@ -113,7 +111,7 @@
             height: 100%; 
             opacity: 0; 
             transform: scale(1);
-            transition: opacity 1s ease-in-out, transform 6s linear; /* تأثير الزوم */
+            transition: opacity 1s ease-in-out, transform 6s linear;
             background-size: cover; 
             background-position: center; 
             display: flex; 
@@ -122,17 +120,13 @@
             padding-right: 8%; 
         }
 
-        .slide.active { 
-            opacity: 1; 
-            transform: scale(1.1); /* تكبير الصورة */
-        }
+        .slide.active { opacity: 1; transform: scale(1.1); }
 
-        /* طبقة داكنة فوق الصورة */
         .slide::before { 
             content: ''; 
             position: absolute; 
             top:0; left:0; width:100%; height:100%; 
-            background: linear-gradient(90deg, rgba(0,0,0,0.1) 0%, rgba(0,0,0,0.7) 60%, rgba(0,0,0,0.9) 100%); 
+            background: linear-gradient(90deg, rgba(0,0,0,0.1) 0%, rgba(0,0,0,0.7) 60%, rgba(0,0,0,0.95) 100%); 
             z-index: 1;
         }
 
@@ -140,7 +134,7 @@
             position: relative; 
             z-index: 2; 
             color: white; 
-            max-width: 600px; 
+            max-width: 650px; 
             text-align: right; 
             opacity: 0; 
             transform: translateY(30px); 
@@ -148,10 +142,7 @@
             transition-delay: 0.5s;
         }
 
-        .slide.active .slide-content { 
-            opacity: 1; 
-            transform: translateY(0); 
-        }
+        .slide.active .slide-content { opacity: 1; transform: translateY(0); }
 
         .slide-content h2 { 
             font-size: 3.5rem; 
@@ -159,7 +150,7 @@
             margin-bottom: 15px; 
             font-family: 'Cairo', sans-serif; 
             color: #fff; 
-            text-shadow: 0 5px 15px rgba(0,0,0,0.5);
+            text-shadow: 0 5px 15px rgba(0,0,0,0.6);
         }
 
         .slide-content h2 span { color: var(--secondary); }
@@ -174,7 +165,7 @@
         }
 
         .hero-btn { 
-            background: linear-gradient(45deg, var(--secondary), #d35400); 
+            background: linear-gradient(45deg, var(--secondary), #a93226); 
             color: white; 
             padding: 15px 45px; 
             border-radius: 50px; 
@@ -183,57 +174,30 @@
             font-size: 1.2rem; 
             border: none; 
             cursor: pointer; 
-            box-shadow: 0 10px 20px rgba(230, 126, 34, 0.3); 
+            box-shadow: 0 10px 20px rgba(192, 57, 43, 0.4); 
             transition: 0.3s; 
             display: inline-block;
         }
-        .hero-btn:hover { 
-            transform: translateY(-5px) scale(1.05); 
-            box-shadow: 0 15px 30px rgba(230, 126, 34, 0.5); 
-        }
+        .hero-btn:hover { transform: translateY(-5px) scale(1.05); }
 
-        /* نقاط التنقل */
         .slider-dots {
-            position: absolute;
-            bottom: 25px;
-            left: 50%;
-            transform: translateX(-50%);
-            display: flex;
-            gap: 10px;
-            z-index: 10;
+            position: absolute; bottom: 25px; left: 50%; transform: translateX(-50%);
+            display: flex; gap: 10px; z-index: 10;
         }
         .dot {
-            width: 12px;
-            height: 12px;
-            background: rgba(255,255,255,0.5);
-            border-radius: 50%;
-            cursor: pointer;
-            transition: 0.3s;
+            width: 12px; height: 12px; background: rgba(255,255,255,0.5); border-radius: 50%; cursor: pointer; transition: 0.3s;
         }
-        .dot.active {
-            background: var(--secondary);
-            width: 30px; 
-            border-radius: 10px;
-        }
-        /* ========================================= */
-        /* === نهاية تنسيقات السلايدر الجديد === */
-        /* ========================================= */
+        .dot.active { background: var(--secondary); width: 30px; border-radius: 10px; }
 
-
-        /* Filter Strip */
+        /* General Styles */
         .sticky-filter-container { position: sticky; top: 80px; z-index: 900; background: rgba(255,255,255,0.98); padding: 15px 0; border-bottom: 1px solid #ddd; box-shadow: 0 5px 10px rgba(0,0,0,0.1); }
         .filters { display: flex; justify-content: center; gap: 12px; flex-wrap: wrap; }
         .filter-btn { background: transparent; border: 2px solid var(--primary); padding: 8px 25px; border-radius: 25px; cursor: pointer; font-weight: 700; color: var(--primary); transition: 0.3s; font-family: 'Cairo', sans-serif; }
         .filter-btn:hover, .filter-btn.active { background: var(--primary); color: white; border-color: var(--primary); }
-        .sub-filters { display: none; justify-content: center; gap: 10px; flex-wrap: wrap; margin-top: 12px; }
-        .sub-filter-btn { border: 1px solid var(--secondary); padding: 6px 18px; border-radius: 20px; background: white; cursor: pointer; color: var(--secondary); font-weight: 600; }
-        .sub-filter-btn.active { background: var(--secondary); color: white; }
-
-        /* Section Titles */
+        
         .section-title { text-align: center; margin: 60px auto 30px; font-size: 2.5rem; color: white; text-shadow: 0 2px 5px rgba(0,0,0,0.8); font-weight: 900; position: relative; }
         .section-title span { color: var(--secondary); }
 
-        /* Cards Grid */
         .products-grid, .offers-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 25px; padding: 0 5%; margin-bottom: 60px; }
         .card { background: var(--glass-bg); border-radius: 15px; overflow: hidden; box-shadow: var(--shadow); transition: 0.4s; position: relative; display: flex; flex-direction: column; border: 1px solid rgba(255,255,255,0.2); }
         .card:hover { transform: translateY(-10px); }
@@ -246,41 +210,30 @@
         .img-wrapper:hover .desc-overlay { opacity: 1; }
         
         .card-body { padding: 20px; display: flex; flex-direction: column; flex-grow: 1; background: #fff; }
-        .card-category { font-size: 0.85rem; color: #7f8c8d; font-weight: 600; margin-bottom: 5px; }
-        .card-title { font-weight: 800; margin: 5px 0 10px; font-size: 1.2rem; color: var(--primary); line-height: 1.4; }
+        .card-title { font-weight: 800; margin: 5px 0 10px; font-size: 1.2rem; color: var(--primary); }
         .card-price { color: var(--secondary); font-size: 1.4rem; font-weight: 900; margin-bottom: 15px; }
         
-        .card-actions { display: flex; gap: 10px; margin-top: auto; }
-        .qty-input { width: 60px; text-align: center; border: 2px solid #eee; border-radius: 8px; padding: 8px; font-weight: bold; font-size: 1rem; }
         .btn { background: var(--primary); color: white; border: none; padding: 12px; border-radius: 8px; cursor: pointer; flex-grow: 1; font-weight: bold; font-family: 'Cairo', sans-serif; transition: 0.3s; }
         .btn:hover { background: var(--secondary); }
-        
-        .offer-tag { position: absolute; top: 15px; right: 15px; background: #e74c3c; color: white; padding: 5px 15px; border-radius: 20px; font-size: 0.9rem; font-weight: bold; z-index: 5; box-shadow: 0 2px 10px rgba(0,0,0,0.2); }
+        .offer-tag { position: absolute; top: 15px; right: 15px; background: var(--secondary); color: white; padding: 5px 15px; border-radius: 20px; font-size: 0.9rem; font-weight: bold; z-index: 5; }
 
-        /* Footer */
         footer { background: #111; color: white; padding: 50px 20px; text-align: center; margin-top: auto; border-top: 5px solid var(--secondary); }
         .footer-logo { font-size: 2.2rem; margin-bottom: 15px; font-family: 'Montserrat', sans-serif; font-weight: bold; }
         .footer-logo span { color: var(--secondary); }
         .contact-info { font-size: 1.2rem; margin-bottom: 10px; color: #ccc; }
 
-        /* Mobile */
         @media (max-width: 768px) {
             header { flex-direction: column; padding: 15px; gap: 15px; }
             .hero-slider { height: 450px; }
             .slide { padding-right: 5%; justify-content: center; text-align: center; }
             .slide-content { text-align: center; padding: 0 15px; width: 100%; max-width: 100%; padding-right: 0; }
             .slide-content h2 { font-size: 2.2rem; }
-            .slide-content p { font-size: 1.1rem; border-right: none; padding-right: 0; }
-            .section-title { font-size: 1.8rem; margin-top: 40px; }
             .products-grid, .offers-grid { grid-template-columns: repeat(2, 1fr); gap: 10px; padding: 0 2%; }
             .img-wrapper { height: 150px; }
-            .card-body { padding: 12px; }
             .card-title { font-size: 0.9rem; }
-            .card-price { font-size: 1rem; }
             .btn { font-size: 0.8rem; padding: 8px; }
         }
 
-        /* Modal & Admin */
         .modal { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.9); z-index: 2000; align-items: center; justify-content: center; backdrop-filter: blur(5px); }
         .modal-content { background: white; width: 500px; max-width: 95%; padding: 30px; border-radius: 15px; position: relative; overflow-y: auto; max-height: 90vh; }
         .form-group { margin-bottom: 15px; }
@@ -293,8 +246,9 @@
 
     <header>
         <div class="logo-container">
-            <i class="fas fa-fire fa-2x" style="color:var(--secondary)"></i>
-            <h1 class="logo-text">Prid <span>Egypt</span></h1>
+            <!-- الشعار بالنص الجديد -->
+            <i class="fas fa-crown fa-2x" style="color:var(--secondary)"></i>
+            <h1 class="logo-text">ROYAL <span>PRIDE</span></h1>
         </div>
         <div>
             <button class="nav-btn" onclick="openModal('cartModal')">
@@ -306,22 +260,19 @@
         </div>
     </header>
 
-    <!-- ========================================= -->
-    <!-- === كود السلايدر الجديد (5 شرائح) === -->
-    <!-- ========================================= -->
     <div class="hero-slider" id="slider">
         
-        <!-- الشريحة 1: بوتاجاز فري ستاند -->
-        <div class="slide active" style="background-image: url('https://images.pexels.com/photos/6874239/pexels-photo-6874239.jpeg');">
+        <!-- Slide 1 -->
+        <div class="slide active" style="background-image: url('https://images.unsplash.com/photo-1556912173-3db996e16054?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80');">
             <div class="slide-content">
-                <h2>فخامة <span>الستانلس</span> ستيل</h2>
-                <p>بوتاجازات Prid Egypt.. تصميم عصري يجمع بين القوة والأناقة ليتحمل أصعب المهام.</p>
+                <h2>فخامة <span>ROYAL</span> PRIDE</h2>
+                <p>بوتاجازات رويال برايد.. تصميم ملكي يجمع بين القوة والأناقة ليتحمل أصعب المهام.</p>
                 <button class="hero-btn" onclick="document.getElementById('productsTitle').scrollIntoView()">اكتشف المجموعة</button>
             </div>
         </div>
 
-        <!-- الشريحة 2: مسطحات بلت ان -->
-        <div class="slide" style="background-image: url('https://images.pexels.com/photos/6294387/pexels-photo-6294387.jpeg');">
+        <!-- Slide 2 -->
+        <div class="slide" style="background-image: url('https://images.unsplash.com/photo-1590794056226-79ef3a8147e1?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80');">
             <div class="slide-content">
                 <h2>مسطحات <span>بلت-إن</span> عصرية</h2>
                 <p>حوّل مطبخك إلى تحفة فنية مع مسطحات الغاز والكهرباء بتكنولوجيا توزيع الحرارة الذكي.</p>
@@ -329,33 +280,32 @@
             </div>
         </div>
 
-        <!-- الشريحة 3: تركيز على الشعلة -->
-        <div class="slide" style="background-image: url('https://images.pexels.com/photos/195029/pexels-photo-195029.jpeg');">
+        <!-- Slide 3 -->
+        <div class="slide" style="background-image: url('https://images.unsplash.com/photo-1626806819282-2c1dc01a5e0c?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80');">
             <div class="slide-content">
                 <h2>قوة <span>نار</span> لا تضاهى</h2>
-                <p>شعلات إيطالية وسنسورات أمان كامل 100%. اطبخي بأمان وسرعة مع Prid Egypt.</p>
+                <p>شعلات إيطالية وسنسورات أمان كامل 100%. اطبخي بأمان وسرعة مع ROYAL PRIDE.</p>
                 <button class="hero-btn" onclick="openModal('cartModal')">اطلب الآن</button>
             </div>
         </div>
 
-        <!-- الشريحة 4: الفرن -->
-        <div class="slide" style="background-image: url('https://images.pexels.com/photos/28054208/pexels-photo-28054208.jpeg');">
+        <!-- Slide 4 -->
+        <div class="slide" style="background-image: url('https://images.unsplash.com/photo-1584622050111-993a426fbf0a?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80');">
             <div class="slide-content">
                 <h2>فرن <span>واسع</span> لكل العزومات</h2>
                 <p>أفران بسعة لترية ضخمة ومراوح توزيع حراري لتسوية مثالية للمخبوزات والمشويات.</p>
             </div>
         </div>
 
-        <!-- الشريحة 5: لايف ستايل / خدمة -->
-        <div class="slide" style="background-image: url('https://images.pexels.com/photos/6956118/pexels-photo-6956118.jpeg');">
+        <!-- Slide 5 -->
+        <div class="slide" style="background-image: url('https://images.unsplash.com/photo-1556910103-1c02745a30bf?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80');">
             <div class="slide-content">
                 <h2>ضمان <span>وخدمة</span> ما بعد البيع</h2>
-                <p>نحن معك دائماً. خدمة عملاء متميزة وضمان حقيقي على جميع منتجاتنا.</p>
+                <p>نحن معك دائماً. خدمة عملاء متميزة وضمان حقيقي من رويال برايد.</p>
                 <a href="https://wa.me/201104368140" target="_blank" class="hero-btn">تواصل واتساب</a>
             </div>
         </div>
 
-        <!-- نقاط التنقل السفلية -->
         <div class="slider-dots">
             <div class="dot active" onclick="goToSlide(0)"></div>
             <div class="dot" onclick="goToSlide(1)"></div>
@@ -364,7 +314,6 @@
             <div class="dot" onclick="goToSlide(4)"></div>
         </div>
     </div>
-    <!-- ========================================= -->
 
     <div class="sticky-filter-container">
         <div class="filters-wrapper">
@@ -380,7 +329,8 @@
     <!-- Admin Panel -->
     <div id="adminDashboard" class="admin-panel">
         <div class="admin-header" style="display:flex; justify-content:space-between; align-items:center; margin-bottom:25px; border-bottom:2px solid #f0f0f0; padding-bottom:15px;">
-            <h3 style="color:var(--primary)">لوحة تحكم Prid Egypt</h3>
+            <!-- الاسم الجديد في لوحة التحكم -->
+            <h3 style="color:var(--primary)">لوحة تحكم ROYAL PRIDE</h3>
             <div style="display:flex; gap:10px;">
                 <button class="btn" onclick="openModal('catManagerModal')" style="width:auto; background:#7f8c8d">الأقسام</button>
                 <button class="btn" onclick="exportToExcel()" style="width:auto; background:#27ae60">تصدير مبيعات</button>
@@ -400,7 +350,7 @@
             <h4 style="margin-bottom:15px; color:var(--secondary);">إضافة بوتاجاز / منتج جديد</h4>
             <input type="hidden" id="pId">
             <div style="display:grid; grid-template-columns: 1fr 1fr; gap:15px;">
-                <div class="form-group"><input type="text" id="pName" placeholder="اسم الموديل (مثال: بريد 5 شعلة)" required></div>
+                <div class="form-group"><input type="text" id="pName" placeholder="اسم الموديل (مثال: رويال 5 شعلة)" required></div>
                 <div class="form-group"><input type="number" id="pPrice" placeholder="السعر" required></div>
                 <div class="form-group"><input type="text" id="pImg" placeholder="رابط الصورة" required></div>
                 <div class="form-group"><input type="text" id="pCat" placeholder="القسم (بوتاجازات / أفران)" required></div>
@@ -422,13 +372,13 @@
         </div>
     </div>
 
-    <h2 class="section-title">عروض <span>Prid Egypt</span></h2>
+    <!-- العناوين بالاسم الجديد -->
+    <h2 class="section-title">عروض <span>ROYAL PRIDE</span></h2>
     <div class="offers-grid" id="offersContainer"></div>
 
     <h2 class="section-title" id="productsTitle">منتجاتنا المميزة</h2>
     <div class="products-grid" id="productsContainer"></div>
 
-    <!-- Contact Section -->
     <div style="text-align: center; margin: 60px 0; padding:0 20px;">
         <div style="background: white; padding: 30px; border-radius: 25px; display: inline-block; box-shadow: 0 10px 30px rgba(0,0,0,0.2); border-bottom: 5px solid var(--secondary); max-width: 100%;">
             <i class="fab fa-whatsapp" style="font-size: 3rem; color: #25D366; margin-bottom: 15px;"></i>
@@ -440,12 +390,12 @@
     </div>
 
     <footer>
-        <div class="footer-logo">Prid <span>Egypt</span></div>
+        <div class="footer-logo">ROYAL <span>PRIDE</span></div>
         <p class="contact-info">المصنع الرائد في صناعة البوتاجازات</p>
         <p class="contact-info"><i class="fas fa-phone-alt"></i> 01104368140</p>
         <p class="contact-info"><i class="fas fa-map-marker-alt"></i> مصر</p>
         <div style="margin-top: 30px; border-top: 1px solid #333; padding-top: 20px; font-size:0.9rem;">
-            &copy; 2025 Prid Egypt. جميع الحقوق محفوظة.
+            &copy; 2025 ROYAL PRIDE. جميع الحقوق محفوظة.
         </div>
     </footer>
 
@@ -466,7 +416,6 @@
         </div>
     </div>
 
-    <!-- Admin Login -->
     <div id="adminLoginModal" class="modal">
         <div class="modal-content" style="text-align:center; max-width:400px;">
             <span onclick="closeModal('adminLoginModal')" style="float:left; cursor:pointer;">&times;</span>
@@ -478,7 +427,6 @@
         </div>
     </div>
 
-    <!-- Category Manager -->
     <div id="catManagerModal" class="modal">
         <div class="modal-content">
             <span onclick="closeModal('catManagerModal')" style="float:left; cursor:pointer;">&times;</span>
@@ -493,13 +441,12 @@
     <script>
         const firebaseConfig = {
             apiKey: "AIzaSyBaERAZdr8y6eXD68imolWJe2MFSnHwnaE",
-  authDomain: "samaa-38196.firebaseapp.com",
-  databaseURL: "https://samaa-38196-default-rtdb.firebaseio.com",
-  projectId: "samaa-38196",
-  storageBucket: "samaa-38196.firebasestorage.app",
-  messagingSenderId: "46441373470",
-  appId: "1:46441373470:web:87a12b9844f5e15a00330f",
-  measurementId: "G-3JHYR3D6EP"
+            authDomain: "samaa-38196.firebaseapp.com",
+            databaseURL: "https://samaa-38196-default-rtdb.firebaseio.com",
+            projectId: "samaa-38196",
+            storageBucket: "samaa-38196.firebasestorage.app",
+            messagingSenderId: "46441373470",
+            appId: "1:46441373470:web:87a12b9844f5e15a00330f"
         };
         
         if (!firebase.apps.length) firebase.initializeApp(firebaseConfig);
@@ -511,14 +458,12 @@
         let currentFilter = { cat: 'all', sub: null };
         let editingProductId = null;
 
-        // متغيرات السلايدر
+        // Slider Variables
         let slideIndex = 0;
         let slides, dots, sliderInterval;
 
         document.addEventListener("DOMContentLoaded", () => {
-            // تهيئة السلايدر الجديد
             initSlider(); 
-            
             populateGovernorates();
             document.getElementById('loader').style.display='block';
             
@@ -541,7 +486,7 @@
             });
         });
 
-        // --- Slider Functions (تم التحديث) ---
+        // --- Slider Functions ---
         function initSlider(){
             slides = document.querySelectorAll('.slide');
             dots = document.querySelectorAll('.dot');
@@ -560,9 +505,7 @@
             if(dots[slideIndex]) dots[slideIndex].classList.add('active');
         }
 
-        function nextSlide() {
-            showSlide(slideIndex + 1);
-        }
+        function nextSlide() { showSlide(slideIndex + 1); }
 
         function goToSlide(n) {
             showSlide(n);
@@ -570,11 +513,9 @@
             startAutoSlide();
         }
 
-        function startAutoSlide() {
-            sliderInterval = setInterval(nextSlide, 5000); 
-        }
+        function startAutoSlide() { sliderInterval = setInterval(nextSlide, 5000); }
 
-        // --- Core Functions ---
+        // --- Logic Functions ---
         function openModal(id){ document.getElementById(id).style.display='flex'; }
         function closeModal(id){ document.getElementById(id).style.display='none'; }
         
@@ -649,7 +590,7 @@
             const ex = cart.find(x=>x.id==id);
             if(ex) ex.qty+=qty; else cart.push({...p, qty});
             updateCartUI(); 
-            document.querySelector('.fa-shopping-cart').style.color = '#e67e22';
+            document.querySelector('.fa-shopping-cart').style.color = '#c0392b';
             setTimeout(()=>document.querySelector('.fa-shopping-cart').style.color='', 300);
         }
 
@@ -678,7 +619,8 @@
             const order = { invId, date: new Date().toLocaleDateString(), name:n, phone:ph, gov:g, address:ad, total:tot, items:cart };
             
             db.ref('orders/'+invId).set(order).then(()=>{
-                let msg = `*طلب جديد (Prid Egypt)*\n📄 فاتورة: ${invId}\n👤 العميل: ${n}\n📱 موبايل: ${ph}\n📍 العنوان: ${g} - ${ad}\n\n*المنتجات:*\n`;
+                // تغيير اسم الشركة في رسالة الواتساب
+                let msg = `*طلب جديد (ROYAL PRIDE)*\n📄 فاتورة: ${invId}\n👤 العميل: ${n}\n📱 موبايل: ${ph}\n📍 العنوان: ${g} - ${ad}\n\n*المنتجات:*\n`;
                 cart.forEach(c=> msg+=`▫️ ${c.name} (العدد: ${c.qty})\n`);
                 msg+=`\n💰 *الإجمالي:* ${tot} جنيه`;
                 cart=[]; updateCartUI(); closeModal('cartModal');
@@ -688,7 +630,8 @@
 
         function loginAdmin(){
             const u=document.getElementById('adminUser').value, p=document.getElementById('adminPass').value;
-            const email = (u==='admin') ? 'admin@pridegypt.com' : u; 
+            // تحديث إيميل الدخول الافتراضي
+            const email = (u==='admin') ? 'admin@royalpride.com' : u; 
             auth.signInWithEmailAndPassword(email, p).catch(e=>alert(e.message));
         }
         function logoutAdmin(){ auth.signOut(); }
@@ -756,7 +699,8 @@
             const wb = XLSX.utils.book_new();
             const ws = XLSX.utils.json_to_sheet(exportData);
             XLSX.utils.book_append_sheet(wb, ws, "المبيعات");
-            XLSX.writeFile(wb, "PridEgypt_Sales.xlsx");
+            // تغيير اسم ملف الإكسل
+            XLSX.writeFile(wb, "RoyalPride_Sales.xlsx");
         }
 
         function populateGovernorates(){
@@ -781,5 +725,3 @@
     </script>
 </body>
 </html>
-
-
