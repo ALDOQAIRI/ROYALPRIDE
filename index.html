@@ -5,23 +5,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <!-- 1. العنوان تم تغييره -->
     <title>ROYAL PRIDE | القمة في تكنولوجيا البوتاجازات</title>
     <meta name="google-site-verification" content="M4AVPnmakVfGb3OU5CIqN--Dqi4C-6KYQn-MhFM0ymU" />
     
-    <!-- 2. الوصف -->
     <meta name="description" content="شركة ROYAL PRIDE (رويال برايد) الرائدة في تصنيع البوتاجازات والمسطحات البلت ان. فخامة التصميم وقوة الأداء. تسوق الآن أحدث الموديلات بأفضل الأسعار. 01104368140">
-    
-    <!-- 3. الكلمات المفتاحية -->
     <meta name="keywords" content="بوتاجازات, ROYAL PRIDE, رويال برايد, مصنع بوتاجازات, افضل بوتاجاز في مصر, صيانة بوتاجازات, بوتاجاز 5 شعلة, افران بلت ان">
     
-    <!-- 4. تحسين الظهور المحلي -->
     <meta name="geo.region" content="EG" />
     <meta name="geo.placename" content="Cairo" />
     <meta name="geo.position" content="30.0444;31.2357" />
     <meta name="ICBM" content="30.0444, 31.2357" />
 
-    <!-- 5. الأيقونة -->
     <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/785/785116.png" type="image/png">
     
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -31,7 +25,6 @@
     <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-database.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-auth.js"></script>
 
-    <!-- Schema Markup تم التحديث -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -64,9 +57,9 @@
 
     <style>
         :root {
-            --primary: #1e272e;    /* أسود فحمي */
-            --secondary: #c0392b;  /* أحمر ملكي داكن */
-            --accent: #e74c3c;     /* أحمر ساطع */
+            --primary: #1e272e;    
+            --secondary: #c0392b;  
+            --accent: #e74c3c;     
             --steel: #ced4da;      
             --glass-bg: rgba(255, 255, 255, 0.97);
             --shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
@@ -95,9 +88,11 @@
         .nav-btn:hover { color: var(--secondary); transform: scale(1.1); }
         .badge { position: absolute; top: -8px; right: -8px; background: var(--secondary); color: white; border-radius: 50%; padding: 4px 7px; font-size: 0.7rem; font-weight: bold; border: 2px solid white; }
 
-        /* Slider Styles */
+        /* ========================================================== */
+        /* تعديلات السلايدر لضبط الصور */
+        /* ========================================================== */
         .hero-slider { 
-            height: 600px; 
+            height: 600px; /* ارتفاع مناسب للكمبيوتر */
             position: relative; 
             overflow: hidden; 
             width: 100%; 
@@ -110,23 +105,27 @@
             width: 100%; 
             height: 100%; 
             opacity: 0; 
-            transform: scale(1);
-            transition: opacity 1s ease-in-out, transform 6s linear;
+            transform: scale(1); /* إلغاء الزوم الكبير لضمان ظهور الصورة */
+            /* جعل الصورة تغطي المساحة بالكامل بدون فراغات */
             background-size: cover; 
-            background-position: center; 
+            /* توسيط الصورة لضمان ظهور المنتج في المنتصف */
+            background-position: center center; 
+            background-repeat: no-repeat;
+            transition: opacity 1s ease-in-out, transform 6s linear;
             display: flex; 
             align-items: center; 
             justify-content: flex-start; 
             padding-right: 8%; 
         }
 
-        .slide.active { opacity: 1; transform: scale(1.1); }
+        .slide.active { opacity: 1; transform: scale(1.03); /* زوم بسيط جداً لإعطاء حياة للصورة دون قصها */ }
 
         .slide::before { 
             content: ''; 
             position: absolute; 
             top:0; left:0; width:100%; height:100%; 
-            background: linear-gradient(90deg, rgba(0,0,0,0.1) 0%, rgba(0,0,0,0.7) 60%, rgba(0,0,0,0.95) 100%); 
+            /* تقليل التعتيم قليلاً لرؤية المنتج بوضوح */
+            background: linear-gradient(90deg, rgba(0,0,0,0.1) 0%, rgba(0,0,0,0.6) 60%, rgba(0,0,0,0.9) 100%); 
             z-index: 1;
         }
 
@@ -188,6 +187,7 @@
             width: 12px; height: 12px; background: rgba(255,255,255,0.5); border-radius: 50%; cursor: pointer; transition: 0.3s;
         }
         .dot.active { background: var(--secondary); width: 30px; border-radius: 10px; }
+        /* ========================================================== */
 
         /* General Styles */
         .sticky-filter-container { position: sticky; top: 80px; z-index: 900; background: rgba(255,255,255,0.98); padding: 15px 0; border-bottom: 1px solid #ddd; box-shadow: 0 5px 10px rgba(0,0,0,0.1); }
@@ -224,8 +224,16 @@
 
         @media (max-width: 768px) {
             header { flex-direction: column; padding: 15px; gap: 15px; }
-            .hero-slider { height: 450px; }
-            .slide { padding-right: 5%; justify-content: center; text-align: center; }
+            
+            /* تعديل مهم للموبايل: تقليل الارتفاع لتناسب الصور العريضة بشكل أفضل */
+            .hero-slider { height: 350px; } 
+            
+            .slide { 
+                padding-right: 5%; 
+                justify-content: center; 
+                text-align: center;
+                background-position: center center; /* ضمان توسط الصورة */
+            }
             .slide-content { text-align: center; padding: 0 15px; width: 100%; max-width: 100%; padding-right: 0; }
             .slide-content h2 { font-size: 2.2rem; }
             .products-grid, .offers-grid { grid-template-columns: repeat(2, 1fr); gap: 10px; padding: 0 2%; }
@@ -246,7 +254,6 @@
 
     <header>
         <div class="logo-container">
-            <!-- الشعار بالنص الجديد -->
             <i class="fas fa-crown fa-2x" style="color:var(--secondary)"></i>
             <h1 class="logo-text">ROYAL <span>PRIDE</span></h1>
         </div>
@@ -326,10 +333,8 @@
         <i class="fas fa-spinner fa-spin fa-2x"></i><br>جاري تحميل المنتجات...
     </div>
 
-    <!-- Admin Panel -->
     <div id="adminDashboard" class="admin-panel">
         <div class="admin-header" style="display:flex; justify-content:space-between; align-items:center; margin-bottom:25px; border-bottom:2px solid #f0f0f0; padding-bottom:15px;">
-            <!-- الاسم الجديد في لوحة التحكم -->
             <h3 style="color:var(--primary)">لوحة تحكم ROYAL PRIDE</h3>
             <div style="display:flex; gap:10px;">
                 <button class="btn" onclick="openModal('catManagerModal')" style="width:auto; background:#7f8c8d">الأقسام</button>
@@ -372,7 +377,6 @@
         </div>
     </div>
 
-    <!-- العناوين بالاسم الجديد -->
     <h2 class="section-title">عروض <span>ROYAL PRIDE</span></h2>
     <div class="offers-grid" id="offersContainer"></div>
 
@@ -399,7 +403,6 @@
         </div>
     </footer>
 
-    <!-- Cart Modal -->
     <div id="cartModal" class="modal">
         <div class="modal-content">
             <span onclick="closeModal('cartModal')" style="float:left; cursor:pointer; font-size:2rem;">&times;</span>
@@ -458,7 +461,6 @@
         let currentFilter = { cat: 'all', sub: null };
         let editingProductId = null;
 
-        // Slider Variables
         let slideIndex = 0;
         let slides, dots, sliderInterval;
 
@@ -486,7 +488,6 @@
             });
         });
 
-        // --- Slider Functions ---
         function initSlider(){
             slides = document.querySelectorAll('.slide');
             dots = document.querySelectorAll('.dot');
@@ -515,7 +516,6 @@
 
         function startAutoSlide() { sliderInterval = setInterval(nextSlide, 5000); }
 
-        // --- Logic Functions ---
         function openModal(id){ document.getElementById(id).style.display='flex'; }
         function closeModal(id){ document.getElementById(id).style.display='none'; }
         
@@ -619,7 +619,6 @@
             const order = { invId, date: new Date().toLocaleDateString(), name:n, phone:ph, gov:g, address:ad, total:tot, items:cart };
             
             db.ref('orders/'+invId).set(order).then(()=>{
-                // تغيير اسم الشركة في رسالة الواتساب
                 let msg = `*طلب جديد (ROYAL PRIDE)*\n📄 فاتورة: ${invId}\n👤 العميل: ${n}\n📱 موبايل: ${ph}\n📍 العنوان: ${g} - ${ad}\n\n*المنتجات:*\n`;
                 cart.forEach(c=> msg+=`▫️ ${c.name} (العدد: ${c.qty})\n`);
                 msg+=`\n💰 *الإجمالي:* ${tot} جنيه`;
@@ -630,7 +629,6 @@
 
         function loginAdmin(){
             const u=document.getElementById('adminUser').value, p=document.getElementById('adminPass').value;
-            // تحديث إيميل الدخول الافتراضي
             const email = (u==='admin') ? 'admin@royalpride.com' : u; 
             auth.signInWithEmailAndPassword(email, p).catch(e=>alert(e.message));
         }
@@ -699,7 +697,6 @@
             const wb = XLSX.utils.book_new();
             const ws = XLSX.utils.json_to_sheet(exportData);
             XLSX.utils.book_append_sheet(wb, ws, "المبيعات");
-            // تغيير اسم ملف الإكسل
             XLSX.writeFile(wb, "RoyalPride_Sales.xlsx");
         }
 
@@ -725,4 +722,3 @@
     </script>
 </body>
 </html>
-
